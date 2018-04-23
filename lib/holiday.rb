@@ -63,7 +63,7 @@ def all_supplies_in_holidays(holiday_hash)
   +      puts "  #{capitalized_holiday}: #{supplies.join(', ')}"
   +    end
   +  end
-end
+
 end
 
 def all_holidays_with_bbq(holiday_hash)
@@ -82,5 +82,4 @@ def all_holidays_with_bbq(holiday_hash)
   +  end
   +  new_array
    end
-end
 end
