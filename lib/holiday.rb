@@ -1,23 +1,6 @@
 require 'pry'
 
 def second_supply_for_fourth_of_july(holiday_hash)
-  # given that holiday_hash looks like this:
-  # {
-  #   :winter => {
-  #     :christmas => ["Lights", "Wreath"],
-  #     :new_years => ["Party Hats"]
-  #   },
-  #   :summer => {
-  #     :fourth_of_july => ["Fireworks", "BBQ"]
-  #   },
-  #   :fall => {
-  #     :thanksgiving => ["Turkey"]
-  #   },
-  #   :spring => {
-  #     :memorial_day => ["BBQ"]
-  #   }
-  # }
-  # return the second element in the 4th of July array
   holiday_hash[:summer][:fourth_of_july][1]
 end
 
@@ -56,26 +39,11 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-  holiday_hash.each do |season, _holiday_hash|
-  +    puts "#{season.to_s.capitalize}:"
-  +    _holiday_hash.each do |holiday, supplies|
-  +      capitalized_holiday = holiday.to_s.split('_').each {|i| i.capitalize!}.join(' ')
-  +      puts "#{capitalized_holiday}: #{supplies.join(', ')}"
-  +    end
-  +  end
+
 end
 
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
-  holiday_hash.each do |season, _holiday_hash|
-  +    _holiday_hash.each do |holiday_name, supplies_array|
-  +      supplies_array.each do |supply|
-  +        if supply == "BBQ"
-  +          new_array << holiday_name
-  +        end
-  +      end
-  +    end
-  +  end
-  +  new_array
+
 end
